@@ -137,12 +137,60 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 60.92%;
           flex: 0 1 60.92%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 .main-screen__offer {
   padding: 0 77px 0 0;
 }
 .main-screen__collage {
   width: 100%;
+}
+@media (max-width: 1116px) {
+  .main-screen {
+    padding: 100px 0;
+  }
+  .main-screen__offer {
+    padding: 0 20px 0 0;
+  }
+}
+@media (orientation: portrait) {
+  .main-screen {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+@media (max-width: 641px) {
+  .main-screen {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  .main-screen__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-screen__column {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .main-screen__column_b {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    margin: 0 0 35px 0;
+  }
+  .main-screen__offer {
+    padding: 0;
+  }
 }
 
 .offer__title {
@@ -161,11 +209,65 @@ h1, h2, h3, h4, h5, h6 {
   height: 68px;
   left: 215px;
   top: 464px;
-  background: #C4C4C4;
+  background: #c4c4c4;
   text-align: center;
   color: #000;
   font-size: 2.14em;
   line-height: 68px;
+}
+@media (max-width: 1024px) {
+  .offer__title {
+    font-weight: 700;
+    font-size: 3em;
+    margin: 0 0 22px 0;
+  }
+  .offer__text {
+    font-size: 2em;
+    line-height: 1.5em;
+    margin: 0 0 22px 0;
+  }
+  .offer__btn {
+    display: block;
+    width: 150px;
+    height: 51px;
+    background: #c4c4c4;
+    text-align: center;
+    color: #000;
+    font-size: 2em;
+    line-height: 51px;
+  }
+}
+@media (max-width: 830px) {
+  .offer__title {
+    font-weight: 700;
+    font-size: 2.5em;
+  }
+  .offer__text {
+    font-size: 1.7em;
+    line-height: 1.5em;
+  }
+  .offer__btn {
+    width: 120px;
+    height: 40px;
+    font-size: 1.7em;
+    line-height: 40px;
+  }
+}
+@media (max-width: 712px) {
+  .offer__title {
+    font-weight: 700;
+    font-size: 2.14em;
+  }
+  .offer__text {
+    font-size: 1.42em;
+    line-height: 1.5em;
+  }
+  .offer__btn {
+    width: 120px;
+    height: 40px;
+    font-size: 1.42em;
+    line-height: 38px;
+  }
 }
 
 .collage {
