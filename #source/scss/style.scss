@@ -84,6 +84,7 @@ $minwidth: 320px;
    }
 
    @media (max-width: 641px) {
+      padding: 80px 0 50px 0;
       flex: none;
 
       &__row {

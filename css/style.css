@@ -111,6 +111,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #000000;
   font-weight: 600;
 }
+.header__burger {
+  display: none;
+}
+
 .logo {
   position: relative;
   width: 73px;
@@ -164,6 +168,117 @@ h1, h2, h3, h4, h5, h6 {
   font-style: 20px;
 }
 
+@media (max-width: 640px) {
+  .container {
+    position: static;
+  }
+
+  body.lock {
+    overflow: hidden;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+  }
+
+  .header {
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    left: 0;
+    top: 0;
+    z-index: 50;
+  }
+  .header__row {
+    top: 5px;
+  }
+  .header__burger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger span {
+    background: #000;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 9px;
+    height: 2px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger.active:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff0da;
+    padding: 80px 0 0 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__menu.active {
+    top: 0;
+  }
+  .header__list {
+    display: block;
+  }
+  .header__list li {
+    margin: 0 0 20px 0;
+  }
+  .header__link {
+    font-size: 2.14em;
+  }
+  .header__contacts {
+    display: none;
+  }
+
+  .header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 240, 218, 0.442);
+    z-index: 3;
+  }
+}
 .ibg {
   background-position: center;
   background-size: cover;
@@ -264,6 +379,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 641px) {
   .main-screen {
+    padding: 80px 0 50px 0;
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;

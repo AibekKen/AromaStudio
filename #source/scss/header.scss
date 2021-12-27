@@ -24,7 +24,6 @@
    }
 
    &__list li {
-      // margin: 0 18px 0 0;
    }
 
    &__link {
@@ -38,6 +37,10 @@
    }
 
    &__number {
+   }
+
+   &__burger {
+      display: none;
    }
 }
 
@@ -90,4 +93,117 @@
 }
 
 @media (max-width: 640px) {
+   .container {
+      position: static;
+   }
+
+   body.lock {
+      overflow: hidden;
+   }
+   .logo {
+      width: 50px;
+      height: 50px;
+      z-index: 3;
+   }
+
+   .header {
+      position: fixed;
+      width: 100%;
+      height: 65px;
+      left: 0;
+      top: 0;
+      z-index: 50;
+      &__row {
+         top: 5px;
+      }
+
+      &__burger {
+         display: block;
+         width: 30px;
+         height: 20px;
+         position: relative;
+         z-index: 3;
+
+         &::before,
+         &::after {
+            content: "";
+            background: #000;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            transition: all 0.5s ease 0s;
+         }
+         
+         &::before {
+            top: 0;
+         }
+         &::after {
+            bottom: 0;
+         }
+
+         span {
+            background: #000;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 9px;
+            height: 2px;
+            transition: all 0.3s ease 0s;
+         }
+      }
+
+      &__burger.active:before {
+         transform: rotate(45deg);
+         top: 9px;
+      }
+      &__burger.active::after {
+         transform: rotate(-45deg);
+         bottom: 9px;
+      }
+      &__burger.active span {
+         transform: scale(0);
+      }
+
+      &__menu {
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         overflow: auto;
+         background-color: rgb(255, 240, 218);
+         padding: 80px 0 0 10px;
+         transition: all 0.3s ease 0s;
+      }
+
+      &__menu.active {
+         top: 0;
+      }
+
+      &__list {
+         display: block;
+         li {
+            margin: 0 0 20px 0;
+         }
+      }
+
+      &__link {
+         font-size: 2.14em;
+      }
+
+      &__contacts {
+         display: none;
+      }
+   }
+
+   .header::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 240, 218, 0.442);
+      z-index: 3;
+   }
 }

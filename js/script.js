@@ -1,12 +1,10 @@
 
-
-$('.icon__menu').click(function(event){
-	$(this).toggleClass('active');
-	$('.menu__body').toggleClass('active');
-	$('.menu__list').toggleClass('active');
-	$('body').toggleClass('lock');
+$(document).ready(function() {
+	$('.header__burger').click(function(event){
+		$('.header__burger, .header__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
 });
-
 
 
 function ibg(){
