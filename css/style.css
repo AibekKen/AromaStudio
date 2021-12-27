@@ -83,6 +83,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 20px;
 }
 .header__logo {
   display: -webkit-box;
@@ -94,18 +98,26 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.header__list li {
-  margin: 0 18px 0 0;
+  min-width: 315px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .header__link {
   font-size: 18px;
   color: #000000;
 }
+.header__link:hover {
+  border-bottom: 1px solid #000000;
+  font-weight: 600;
+}
 .logo {
   position: relative;
   width: 73px;
   height: 73px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .logo__image {
   position: absolute;
@@ -130,9 +142,6 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
 }
-.number span {
-  display: block;
-}
 
 .header__contacts {
   display: -webkit-box;
@@ -141,6 +150,18 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 20px 0 0;
+}
+.header__contacts span {
+  margin: 0 0 0 5px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.header__contacts span span {
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-style: 20px;
 }
 
 .ibg {
@@ -184,14 +205,23 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1230px;
   padding: 0px 15px;
   margin: 0 auto;
+  position: relative;
 }
 
 .main-screen {
   background: rgba(255, 240, 218, 0.37);
-  padding: 142px 0;
+  padding: 142px 0 50px 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
+}
+@media (min-height: 901px) {
+  .main-screen {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    padding: 142px 0 208px 0;
+  }
 }
 .main-screen__row {
   display: -webkit-box;
@@ -219,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1116px) {
   .main-screen {
-    padding: 100px 0;
+    padding: 120px 0 50px 0;
   }
   .main-screen__offer {
     padding: 0 20px 0 0;
@@ -284,6 +314,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-size: 2.14em;
   line-height: 68px;
+}
+.offer__btn:hover {
+  background: #e24040;
+  color: #fff;
 }
 @media (max-width: 1024px) {
   .offer__title {
