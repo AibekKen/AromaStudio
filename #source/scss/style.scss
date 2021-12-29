@@ -7,6 +7,10 @@ $minwidth: 320px;
 
 @import "header.scss";
 
+html {
+   scroll-behavior: smooth;
+ }
+
 .ibg {
    background-position: center;
    background-size: cover;
@@ -48,7 +52,7 @@ $minwidth: 320px;
 
 .main-screen {
    background: rgba(255, 240, 218, 0.37);
-   padding: 142px 0 50px 0;
+   padding: 142px 0 60px 0;
    flex: 1 0 100%;
    @media (min-height: 901px) {
       flex: none;
@@ -230,5 +234,80 @@ $minwidth: 320px;
       height: 100%;
       top: 0;
       left: 0;
+   }
+}
+
+//=================================== About US
+.about {
+   margin-bottom: 100px;
+   &__me {
+      padding: 50px 0 100px 0;
+      max-width: 960px;
+      margin: 0 auto;
+   }
+}
+.me {
+   text-align: center;
+   &__text {
+      position: relative;
+      font-style: italic;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+   }
+
+   &__text::after {
+      content: "";
+      position: absolute;
+      background-color: #c4c4c4;
+      width: 200px;
+      height: 1px;
+      bottom: -50px;
+      left: 50%;
+      transform: translate(-50%, 0);
+   }
+
+   &__image {
+      margin: 100px auto 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+   }
+}
+//=============About product
+
+.about {
+   &__product {
+   }
+}
+.product {
+   &__title {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      margin-bottom: 70px;
+   }
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.items {
+   &__column {
+      display: flex;
+      align-items: center;
+   }
+
+   &__image {
+      width: 94px;
+      height: 69.21px;
+   }
+
+   &__text {
+      padding: 0 0 0 15px;
+      font-size: 20px;
+      line-height: 24px;
    }
 }
