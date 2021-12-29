@@ -9,7 +9,7 @@ $minwidth: 320px;
 
 html {
    scroll-behavior: smooth;
- }
+}
 
 .ibg {
    background-position: center;
@@ -54,6 +54,7 @@ html {
    background: rgba(255, 240, 218, 0.37);
    padding: 142px 0 60px 0;
    flex: 1 0 100%;
+
    @media (min-height: 901px) {
       flex: none;
       padding: 142px 0 208px 0;
@@ -177,7 +178,7 @@ html {
       }
    }
 
-   @media (max-width: 712px) {
+   @media (max-width: 721px) {
       &__title {
          font-weight: 700;
          font-size: 2.14em;
@@ -240,10 +241,19 @@ html {
 //=================================== About US
 .about {
    margin-bottom: 100px;
+   @media (max-width: 721px) {
+      margin-bottom: 50px;
+   }
    &__me {
       padding: 50px 0 100px 0;
       max-width: 960px;
       margin: 0 auto;
+      @media (max-width: 830px) {
+         padding: 50px 0 80px 0;
+      }
+      @media (max-width: 425px) {
+         padding: 50px 0 60px 0;
+      }
    }
 }
 .me {
@@ -254,6 +264,20 @@ html {
       font-size: 40px;
       line-height: 48px;
       text-align: center;
+      @media (max-width: 1024px) {
+         font-size: 2.4em;
+      }
+      @media (max-width: 830px) {
+         font-size: 2em;
+      }
+      @media (max-width: 721px) {
+         font-size: 1.7em;
+         line-height: 1.3em;
+      }
+      @media (max-width: 390px) {
+         font-size: 1.42em;
+         line-height: 1.3em;
+      }
    }
 
    &__text::after {
@@ -265,6 +289,10 @@ html {
       bottom: -50px;
       left: 50%;
       transform: translate(-50%, 0);
+      @media (max-width: 425px) {
+         bottom: -25px;
+         width: 100px;
+      }
    }
 
    &__image {
@@ -272,6 +300,9 @@ html {
       width: 100px;
       height: 100px;
       border-radius: 50%;
+      @media (max-width: 425px) {
+         margin: 50px auto 0;
+      }
    }
 }
 //=============About product
@@ -287,27 +318,67 @@ html {
       line-height: 48px;
       text-align: center;
       margin-bottom: 70px;
+      @media (max-width: 1024px) {
+         font-size: 2.4em;
+      }
+      @media (max-width: 830px) {
+         font-size: 2em;
+      }
+      @media (max-width: 721px) {
+         font-size: 1.7em;
+         line-height: 1.3em;
+         margin-bottom: 40px;
+      }
+      @media (max-width: 390px) {
+         font-size: 1.42em;
+      }
    }
 
    &__items {
       display: flex;
       justify-content: space-between;
+      @media (max-width: 721px) {
+         flex-direction: column;
+      }
    }
 }
 .items {
    &__column {
       display: flex;
       align-items: center;
+      @media (max-width: 721px) {
+         margin: 0 0 30px 0;
+      }
    }
 
    &__image {
       width: 94px;
       height: 69.21px;
+      @media (max-width: 390px) {
+         width: 69.79px;
+         height: 50px;
+      }
+      @media (max-width:  335px) {
+         width: 57px;
+         height: 40.84px;
+      }
+     
+      
    }
 
    &__text {
-      padding: 0 0 0 15px;
+      padding: 0 15px 0 15px;
       font-size: 20px;
       line-height: 24px;
+      @media (max-width: 390px) {
+         font-size: 1.28em;
+         line-height: 1.3em;
+      }
+      @media (max-width: 721px) {
+         padding: 0 0px 0 15px;
+      }
+      @media (max-width:  335px) {
+         padding: 0 0px 0 10px;
+      }
    }
 }
