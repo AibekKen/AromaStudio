@@ -50,6 +50,7 @@ html {
    position: relative;
 }
 
+//=================Main screen=======================================
 .main-screen {
    background: rgba(255, 240, 218, 0.37);
    padding: 142px 0 60px 0;
@@ -238,7 +239,8 @@ html {
    }
 }
 
-//=================================== About US
+//=================================== About US=====================
+//==================================== About me
 .about {
    margin-bottom: 100px;
    @media (max-width: 721px) {
@@ -252,7 +254,7 @@ html {
          padding: 50px 0 80px 0;
       }
       @media (max-width: 425px) {
-         padding: 50px 0 60px 0;
+         padding: 60px 0 60px 0;
       }
    }
 }
