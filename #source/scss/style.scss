@@ -453,11 +453,11 @@ padding: 0px 0 10px;
    display: inline-block;
    transition: background-color 0.6s ease;
 }
-
+/* относиться к точкам
 .active, .dots:hover{
    background-color: #717171;
 }
-
+*/
 .fade{
    -webkit-animation-name: fade;
    -webkit-animation-duration:  1.5s;
