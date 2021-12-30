@@ -2,7 +2,7 @@
 $fontfamily: "Cormorant Infant";
 
 $minwidth: 320px;
-
+$maincolor: rgba(255, 240, 218, 0.37);
 @import "nullstyle.scss";
 
 @import "header.scss";
@@ -52,7 +52,7 @@ html {
 
 //=================Main screen=======================================
 .main-screen {
-   background: rgba(255, 240, 218, 0.37);
+   background: $maincolor;
    padding: 142px 0 60px 0;
    flex: 1 0 100%;
 
@@ -247,7 +247,7 @@ html {
       margin-bottom: 50px;
    }
    &__me {
-      padding: 50px 0 100px 0;
+      padding: 80px 0 100px 0;
       max-width: 960px;
       margin: 0 auto;
       @media (max-width: 830px) {
@@ -384,3 +384,90 @@ html {
       }
    }
 }
+
+
+//======Slider
+.slide__title{
+font-weight: bold;
+font-size: 40px;
+padding: 0px 0 10px;
+@media (max-width: 1024px) {
+   font-size: 2.4em;
+}
+@media (max-width: 830px) {
+   font-size: 2em;
+}
+@media (max-width: 721px) {
+   font-size: 1.7em;
+}
+@media (max-width: 390px) {
+   font-size: 1.42em;
+}
+}
+
+.slide{
+   background-color: $maincolor;
+}
+.slideshow-container {
+   max-width: 1230px;
+   position: relative;
+   margin: auto;
+   padding: 30px 15px;
+}
+.mySlides {
+   width: 100%;
+   padding: 0 0 62% 0;
+}
+
+.prev,
+.next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: white;
+   font-weight: 700px;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+}
+
+.next{
+   right: 15px;
+   border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover{
+   background-color: rgba(0, 0, 0, 0.8);
+}
+.dots {
+   cursor: pointer;
+   height: 13px;
+   width: 13px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+}
+
+.active, .dots:hover{
+   background-color: #717171;
+}
+
+.fade{
+   -webkit-animation-name: fade;
+   -webkit-animation-duration:  1.5s;
+   animation-name: fade;
+   animation-timing-function: ease-in;
+   animation-duration: 1s;
+}
+
+@keyframes fade{
+   0%{opacity: 0.4;}
+   100%{opacity: 1;}
+}
+
