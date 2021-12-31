@@ -309,7 +309,6 @@ html {
 }
 //=============About product
 
-
 .product {
    &__title {
       font-weight: 600;
@@ -357,12 +356,10 @@ html {
          width: 69.79px;
          height: 50px;
       }
-      @media (max-width:  335px) {
+      @media (max-width: 335px) {
          width: 57px;
          height: 40.84px;
       }
-     
-      
    }
 
    &__text {
@@ -376,33 +373,32 @@ html {
       @media (max-width: 721px) {
          padding: 0 0px 0 15px;
       }
-      @media (max-width:  335px) {
+      @media (max-width: 335px) {
          padding: 0 0px 0 10px;
       }
    }
 }
 
-
 //======Slider
-.slide__title{
-font-weight: bold;
-font-size: 40px;
-padding: 0px 0 10px;
-@media (max-width: 1024px) {
-   font-size: 2.4em;
-}
-@media (max-width: 830px) {
-   font-size: 2em;
-}
-@media (max-width: 721px) {
-   font-size: 1.7em;
-}
-@media (max-width: 390px) {
-   font-size: 1.42em;
-}
+.slide__title {
+   font-weight: bold;
+   font-size: 40px;
+   padding: 0px 0 10px;
+   @media (max-width: 1024px) {
+      font-size: 2.4em;
+   }
+   @media (max-width: 830px) {
+      font-size: 2em;
+   }
+   @media (max-width: 721px) {
+      font-size: 1.7em;
+   }
+   @media (max-width: 390px) {
+      font-size: 1.42em;
+   }
 }
 
-.slide{
+.slide {
    background-color: $maincolor;
 }
 .slideshow-container {
@@ -431,13 +427,13 @@ padding: 0px 0 10px;
    border-radius: 0 3px 3px 0;
 }
 
-.next{
+.next {
    right: 15px;
    border-radius: 3px 0 0 3px;
 }
 
 .prev:hover,
-.next:hover{
+.next:hover {
    background-color: rgba(0, 0, 0, 0.36);
 }
 /*  относиться к точкам
@@ -456,16 +452,118 @@ padding: 0px 0 10px;
    background-color: #717171;
 }
 */
-.fade{
+.fade {
    -webkit-animation-name: fade;
-   -webkit-animation-duration:  1.5s;
+   -webkit-animation-duration: 1.5s;
    animation-name: fade;
    animation-timing-function: ease-in;
    animation-duration: 1s;
 }
 
-@keyframes fade{
-   0%{opacity: 0.4;}
-   100%{opacity: 1;}
+@keyframes fade {
+   0% {
+      opacity: 0.4;
+   }
+   100% {
+      opacity: 1;
+   }
 }
 
+//=========================Contacts
+.contacts {
+   padding: 75px 0;
+
+   &__row {
+      display: flex;
+   }
+
+   &__column {
+      flex: 0 1 50%;
+   }
+
+   &__title {
+      max-width: 362px;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 36px;
+      margin: 0 0 75px 0;
+      &_2 
+      {
+         margin: 0 0 45px 0;
+      }
+   }
+
+   &__type {
+      margin: 0 0 45px 0;
+   }
+
+   &__form {
+   }
+}
+
+.type {
+   display: flex;
+   span {
+      display: inline-block;
+   }
+   align-items: center;
+   &__image {
+      position: relative;
+
+      &_1 {
+         margin: -4px -7px;
+         width: 107px;
+         height: 97px;
+      }
+      &_2 {
+         width: 91px;
+         height: 84px;
+      }
+      &_3 {
+         margin: -6px;
+         width: 104px;
+         height: 96px;
+      }
+   }
+
+   &__text {
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 30px;
+      padding: 0 0 0 20px;
+      color: #000;
+   }
+}
+
+.form {
+   &__input {
+      display: block;
+      width: 362px;
+      height: 81px;
+      border: 1px solid #000000;
+      padding: 0 0 0 25px;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0 0 60px 0;
+      &::placeholder {
+         font-weight: bold;
+         font-size: 30px;
+         color: rgba(0, 0, 0, 0.54);
+      }
+      &:focus{
+         box-shadow: 0 0 5px rgb(71, 69, 69);
+      &::placeholder  {
+         color: transparent;
+      }
+      }
+   
+   }
+
+   &__btn {
+      font-weight: bold;
+      font-size: 30px;
+      width: 363px;
+      height: 81px;
+      background: #C4C4C4;
+   }
+}
