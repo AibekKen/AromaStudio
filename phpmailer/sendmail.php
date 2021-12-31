@@ -13,7 +13,7 @@
    //от кого письмо
    $mail->setForm('ai.bek@mail.ru', 'Aibek');
    //кому отпправить
-   $mail-addAddress('ai.bek@mail.ru');
+   $mail->addAddress('ai.bek@mail.ru');
    //тема писма
    $mail->Subject = 'Привет!';
 
@@ -24,7 +24,7 @@
    $body = '<h1>Письмо</h1>';
 
    if(trim(!empty($_POST['name']))){
-      $body.='<p><strong>Имя: </strong> '.$_POST['name'].'<p>';
+      $body.='<p><strong>Имя:</strong> '.$_POST['name'].'<p>';
    }
    if(trim(!empty($_POST['phone']))){
       $body.='<p><strong> Телефон: </strong> '.$_POST['phone'].'<p>';
@@ -46,4 +46,4 @@ $response = ['message' => $message];
 header('Content-type: application/json');
 echo json_encode($response);
 
-   
+?>
