@@ -66,17 +66,17 @@ setInterval(plusSlides, 15000, +1)
 "use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
-   const form = document.getElementById('form')
+   const form = document.getElementById('form');
    form.addEventListener('submit', formSend);
 
    async function formSend(e) {
       e.preventDefault();
 
-      let FormData = new FormData(form);
+      let formData = new FormData(form);
 
       let response = await fetch('sendmail.php', {
          method: 'POST',
-         body: FormData
+         body: formData
       });
 
       if (response.ok) {
@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       else {
          alert("Ошибка");
-
       }
 
 
