@@ -60,4 +60,38 @@ function showSlides(n) {
    slides[slideIndex - 1].style.display = "block";
 }
 
-setInterval(plusSlides,15000,+1)
+setInterval(plusSlides, 15000, +1)
+
+
+"use strict"
+
+document.addEventListener('DOMContentLoaded', function () {
+   const form = document.getElementById('form')
+   form.addEventListener('submit', formSend);
+
+   async function formSend(e) {
+      e.preventDefault();
+
+      let FormData = new FormData(form);
+
+      let response = await fetch('sendmail.php', {
+         method: 'POST',
+         body: FormData
+      });
+
+      if (response.ok) {
+         let result = await response.json();
+         alert(result.message);
+         formPreview.innerHTML = '';
+         form.reset();
+      }
+      else {
+         alert("Ошибка");
+
+      }
+
+
+   }
+
+
+});
