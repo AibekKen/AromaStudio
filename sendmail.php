@@ -11,7 +11,7 @@
    $mail->IsHTML(true);
 
    //от кого письмо
-   $mail->setForm('logissnab@mail.ru', 'Aibek');
+   $mail->setForm('ai.bek@mail.ru', 'Aibek');
    //кому отпправить
    $mail->addAddress('jcconsulting@bk.ru');
    //тема писма

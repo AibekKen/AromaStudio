@@ -63,7 +63,7 @@ function showSlides(n) {
 setInterval(plusSlides, 15000, +1)
 
 
-"use strict"
+//"use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
    const form = document.getElementById('form');
