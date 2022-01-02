@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let formData = new FormData(form);
 
-      let response = await fetch('sendmail.php', {
+      let response = await fetch('Readme.md', {
          method: 'POST',
          body: formData
       });
