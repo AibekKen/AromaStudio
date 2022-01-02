@@ -11,9 +11,9 @@
    $mail->IsHTML(true);
 
    //от кого письмо
-   $mail->setForm('ai.bek@mail.ru', 'Aibek');
+   $mail->setForm('logissnab@mail.ru', 'Aibek');
    //кому отпправить
-   $mail->addAddress('ai.bek@mail.ru');
+   $mail->addAddress('jcconsulting@bk.ru');
    //тема писма
    $mail->Subject = 'Привет!';
 
@@ -35,8 +35,8 @@
    //Отправляем
 
 if(!$mail->send()){
-   $message = 'ошибка';
-}
+   $message = 'ошибка от php';
+} 
 else {
    $message = 'Данные отправлены';
 }

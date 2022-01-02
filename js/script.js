@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let formData = new FormData(form);
 
-      let response = await fetch('Readme.md', {
+      let response = await fetch('sendmail.php', {
          method: 'POST',
          body: formData
       });
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
          form.reset();
       }
       else {
-         alert("Ошибка");
+         alert("Ошибка из JS");
       }
 
 
