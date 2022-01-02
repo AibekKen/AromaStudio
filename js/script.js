@@ -63,7 +63,7 @@ function showSlides(n) {
 setInterval(plusSlides, 15000, +1)
 
 
-//"use strict"
+"use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
    const form = document.getElementById('form');
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let formData = new FormData(form);
 
-      let response = await fetch('sendmail.php', {
+      let response = await fetch('/sendmail.php', {
          method: 'POST',
          body: formData
       });
