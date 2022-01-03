@@ -62,7 +62,7 @@ function showSlides(n) {
 
 setInterval(plusSlides, 15000, +1)
 
-
+/*
 "use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -93,4 +93,5 @@ document.addEventListener('DOMContentLoaded', function () {
    }
 
 
-});
+});*/
+
