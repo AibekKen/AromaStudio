@@ -98,14 +98,31 @@ document.addEventListener('DOMContentLoaded', function () {
 document.querySelector("form").addEventListener("submit", handleSubmit);
 
 const handleSubmit = (e) => {
-  e.preventDefault()
-  let myForm = document.getElementById('form');
-  let formData = new FormData(myForm)
-  fetch('/', {
-    method: 'POST',
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
-    alert(error))
+   e.preventDefault()
+   let myForm = document.getElementById('form');
+   let formData = new FormData(myForm)
+   fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+   }).then(() => console.log('Form successfully submitted')).catch((error) =>
+      alert(error))
 }
 
+
+const feedbackForm = document.forms.feedback;
+const nameInput = feedbackForm.name;
+const phoneInput = feedbackForm.phone;
+
+document.addEventListener('DOMContentLoaded', () => {
+
+   feedbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (nameInput.value !== '' && phoneInput.value !== '') {
+         const urlSendMessage = `https://api.telegram.org/bot5252060913:AAHzZABfi-Xf8215_RVm3KG4BDaxXYWRSYU/sendMessage?chat_id=197766493&text=Заявка%0AИмя: ${nameInput.value}%0AТелефон: ${phoneInput.value};`
+         fetch(urlSendMessage)
+         nameInput.value = '';
+         phoneInput.value = ''
+      }
+   })
+})
