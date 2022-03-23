@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });*/
-
+/* для отравки на почту
 document.querySelector("form").addEventListener("submit", handleSubmit);
 
 const handleSubmit = (e) => {
@@ -108,8 +108,9 @@ const handleSubmit = (e) => {
    }).then(() => console.log('Form successfully submitted')).catch((error) =>
       alert(error))
 }
+*/
 
-
+// Отправка на телеграмм
 const feedbackForm = document.forms.feedback;
 const nameInput = feedbackForm.name;
 const phoneInput = feedbackForm.phone;
